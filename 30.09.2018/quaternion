@@ -8,18 +8,18 @@ struct Quaternion
 	double y;
 	double z;
 	
-	Quaternion (double w1, double x1, double y1, double z1): w(w1), x(x1), y(y1), z(z1)  //конструктор
+	Quaternion (double w1, double x1, double y1, double z1): w(w1), x(x1), y(y1), z(z1)  //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°
 	{		
 	}
-	Quaternion summ( Quaternion& a, Quaternion& b)                                       //сумма
+	Quaternion summ( Quaternion& a, Quaternion& b)                                       //Г±ГіГ¬Г¬Г 
 	{
 		return Quaternion(a.w + b.w , a.x + b.x , a.y + b.y , a.z + b.z);
 	}
-	Quaternion diff( Quaternion& a, Quaternion& b)                                       //разность
+	Quaternion diff( Quaternion& a, Quaternion& b)                                       //Г°Г Г§Г­Г®Г±ГІГј
 	{
 		return Quaternion(a.w - b.w , a.x - b.x , a.y - b.y , a.z - b.z);
 	}
-	Quaternion mul(Quaternion& a, Quaternion& b)                                         //умножение
+	Quaternion mul(Quaternion& a, Quaternion& b)                                         //ГіГ¬Г­Г®Г¦ГҐГ­ГЁГҐ
 	{
 		Quaternion c(0,0,0,0);
 		c.w=a.w * b.w - a.x * b.x - a.y * b.y - a.z * b.z;   
